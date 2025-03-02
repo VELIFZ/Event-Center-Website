@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mush Fest - Events</title>
+    <title>Mush Fest | Home</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,10 +21,8 @@
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="events.html">EVENTS</a></li>
                 <li><a href="menu.html">MENU</a></li>
-                <li><a href="workshops.html">WORKSHOPS</a></li>
-                <li><a href="location.html" class="active">LOCATION</a></li>
-                <li><a href="shop.html">SHOPS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="location_contact.html#location" class="active">LOCATION</a></li>
+                <li><a href="location_contact.html#contact">CONTACT</a></li>
             </ul>
             <div class="search-container">
                 <img src="assets/images/search.png" alt="Search Icon" class="search-icon">
@@ -35,46 +33,85 @@
     
     <!-- Main Content -->
     <main class="site-main">
-        <section class="welcome">
-            <h2>Welcome to Our Events</h2>
-            <p>Explore exciting events happening at Mush Fest! From live concerts to creative contests, we have something for everyone.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to Mush Fest</h1>
+            <p>A Celebration of Nature, Creativity, and Mushrooms!</p>
+            <a href="events.html" class="cta-btn">Explore the Festival</a>
         </section>
 
-        <section class="events">
-            <h2>Upcoming Events</h2>
+        <!-- About Mush Fest -->
+        <section class="about-festival">
+            <h2>What is Mush Fest?</h2>
+            <p>Experience the magic of mushrooms at our annual festival. From live music and delicious food to foraging workshops and creative art contests, there’s something for everyone!</p>
+            <a href="about.html" class="btn">Learn More</a>
+        </section>
+
+        <!-- Featured Events -->
+        <section class="featured-events">
+            <h2>Featured Events</h2>
             <div class="event-grid">
-                <article class="event">
-                    <img src="assets/images/istockphoto-1353587449-612x612.jpg" alt="Mushroom Costume Contest">
+                <div class="event-card">
+                    <div class="event-image-container">
+                        <img src="assets/images/mushroom-royalty-costumes-we-did-for-the-renaissance-v0-7twrola4qux91.jpg.webp" alt="Mushroom Costume Contest">
+                    </div>
                     <h3>Mushroom Costume Contest</h3>
-                    <hr>
-                    <p> The crowd is your jury! Dress up in your best mushroom-inspired look and compete in these categories:</p>
-                    <ul>
-                        <li>Best Handmade</li>
-                        <li>Most Creative</li>
-                        <li>Funniest</li>
-                        <li>Best Overall</li>
-                    </ul>
-                    <p>Top 3 winners take home special prizes! Get ready to impress and have fun.</p>
-                </article>
-
-                <article class="event">
-                    <img src="assets/images/live-music.jpg" alt="Live Concert">
-                    <h3>Live Concert</h3>
-                    <p>Enjoy an unforgettable night with amazing live performances. Stay tuned for the lineup!</p>
-                </article>
-
-                <article class="event">
-                    <img src="assets/images/cooking-workshop.jpg" alt="Mushroom Cooking Workshop">
-                    <h3>Mushroom Cooking Workshop</h3>
-                    <p>Learn from top chefs how to prepare delicious mushroom dishes. Includes hands-on cooking experience!</p>
-                </article>
-
-                <article class="event">
-                    <img src="assets/images/forest-tour.jpg" alt="Mushroom Foraging Tour">
-                    <h3>Mushroom Foraging Tour</h3>
-                    <p>Join experts on a guided tour to identify and safely forage wild mushrooms.</p>
-                </article>
+                    <p>Dress up, get creative, and compete for prizes!</p>
+                    <a href="events.html" class="btn">View Details</a>
+                </div>
+                <div class="event-card">
+                    <div class="event-image-container">
+                        <img src="assets/images/rock-concert-excitement-stockcake.jpg" alt="Live Music">
+                    </div>
+                    <h3>Live Music & Performances</h3>
+                    <p>Enjoy live folk, indie, and acoustic performances.</p>
+                    <a href="events.html" class="btn">See Lineup</a>
+                </div>
+                <div class="event-card">
+                    <div class="event-image-container">
+                        <img src="assets/images/wildforaging_herohires.webp" alt="Mushroom Foraging Tour">
+                    </div>
+                    <h3>Foraging & Cooking Workshop</h3>
+                    <p>Learn to identify, forage, and cook wild mushrooms.</p>
+                    <a href="events.html" class="btn">Join the Workshop</a>
+                </div>
             </div>
+        </section>
+
+        <!-- Marketplace & Vendor Stalls -->
+        <section class="marketplace">
+            <h2>Marketplace & Vendor Stalls</h2>
+            <p>Discover unique festival stands offering handmade goods, herbal teas, and mushroom delicacies.</p>
+            <div class="vendor-grid">
+                <div class="vendor-card">
+                    <img src="assets/images/tea stand.avif" alt="Herbal Teas">
+                    <h3>Herbal Tea & Remedies</h3>
+                    <p>Handcrafted mushroom teas and wellness drinks.</p>
+                </div>
+                <div class="vendor-card">
+                    <img src="assets/images/ jewelry.avif" alt="Handmade Jewelry">
+                    <h3>Handmade Jewelry & Art</h3>
+                    <p>Nature-inspired jewelry, art, and festival merch.</p>
+                </div>
+                <div class="vendor-card">
+                    <img src="assets/images/food.avif" alt="Mushroom Delicacies">
+                    <h3>Gourmet Mushroom Delicacies</h3>
+                    <p>Truffle-infused foods, wild mushroom snacks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Your Visit -->
+        <section class="visit-info">
+            <h2>Plan Your Visit</h2>
+            <p>📍 123 Mushroom Lane, Tampa, FL |  September 15-17, 2025</p>
+            <a href="location_contact.html" class="btn">Get Directions</a>
+        </section>
+
+        <!-- Stay Connected -->
+        <section class="stay-connected">
+            <h2>Stay Connected</h2>
+            <p>Follow us on social media for festival updates!</p>
         </section>
     </main>
 

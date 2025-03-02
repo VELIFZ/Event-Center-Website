@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mush Fest - Events</title>
+    <title>Events | Mush Fest</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,10 +21,8 @@
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="events.html">EVENTS</a></li>
                 <li><a href="menu.html">MENU</a></li>
-                <li><a href="workshops.html">WORKSHOPS</a></li>
-                <li><a href="location.html" class="active">LOCATION</a></li>
-                <li><a href="shop.html">SHOPS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="location_contact.html#location" class="active">LOCATION</a></li>
+                <li><a href="location_contact.html#contact">CONTACT</a></li>
             </ul>
             <div class="search-container">
                 <img src="assets/images/search.png" alt="Search Icon" class="search-icon">
@@ -34,8 +32,67 @@
     </header>
     
     <!-- Main Content -->
-    <main class="site-main">
+    <main class="event-main">
+        <!-- Event Categories -->
+        <section class="event-categories">
+            <section class="upcoming-events">
+                <h1>Upcoming Events at Mush Fest</h1>
+                <p>Celebrate mushrooms with live performances, workshops, and competitions!</p>
+            </section>
+            <h2>Explore Events</h2>
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="workshops">Workshops</button>
+                <button class="category-btn" data-category="music">Live Music</button>
+                <button class="category-btn" data-category="competitions">Competitions</button>
+            </div>
+        </section>
 
+        <!-- Featured Event -->
+        <section class="featured-event">
+            <div class="event-image">
+                <img src="assets/images/istockphoto-1353587449-612x612.jpg" alt="Mushroom Costume Contest">
+            </div>
+            <div class="event-details">
+                <h2>Mushroom Costume Contest</h2>
+                <p>Get creative and show off your best mushroom-inspired costume! Compete for prizes and have fun.</p>
+                <button class="event-btn">Join the Contest</button>
+            </div>
+        </section>
+
+        <!-- Event Grid -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <section class="event-grid">
+                <div class="event" data-category="workshops">
+                    <img src="assets/images/cook.jpeg" alt="Cooking Workshop">
+                    <h3>Foraging & Cooking Workshop</h3>
+                    <p>Learn how to forage and cook gourmet mushroom dishes.</p>
+                    <button class="event-btn">Learn More</button>
+                </div>
+
+                <div class="event" data-category="music">
+                    <img src="assets/images/music.jpeg" alt="Live Music">
+                    <h3>Live Music & Performances</h3>
+                    <p>Enjoy live bands, folk music, and more!</p>
+                    <button class="event-btn">See Lineup</button>
+                </div>
+
+                <div class="event" data-category="competitions">
+                    <img src="assets/images/art.jpeg" alt="Mushroom Art Contest">
+                    <h3>Mushroom Art Contest</h3>
+                    <p>Showcase your creativity in our mushroom-inspired art competition.</p>
+                    <button class="event-btn">Join Now</button>
+                </div>
+
+                <div class="event" data-category="workshops">
+                    <img src="assets/images/forage.jpeg" alt="Mushroom Picking Workshop">
+                    <h3>Mushroom Picking & Learning Workshop</h3>
+                    <p>Join expert foragers to safely identify, harvest, and cook wild mushrooms.</p>
+                    <button class="event-btn">Join Workshop</button>
+                </div>
+            </section>
+        </section>
     </main>
 
     <!-- Footer -->

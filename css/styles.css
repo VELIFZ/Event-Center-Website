@@ -9,7 +9,9 @@ hr {
     color: #C89B7A;
 }
 
-/* Header */
+/* =================== */
+/* MARK: Header */
+/* =================== */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -41,7 +43,9 @@ hr {
     gap: 15px; 
 }
 
-/* Navbar */
+/* =================== */
+/* MARK: Navbar */
+/* =================== */
 .navbar {
     display: flex;
     align-items: center; 
@@ -111,7 +115,9 @@ hr {
     color: #DFC5A4;
 }
 
-/* Main Content */
+/* =================== */
+/* MARK: Home Main Content */
+/* =================== */
 .site-main {
     padding: 1.25rem;
 }
@@ -122,48 +128,123 @@ hr {
     padding: 2.5rem 1.25rem;
 }
 
-.events {
-    text-align: center;
-    margin-top: 1.25rem;
-    padding: 2.5rem 1.25rem;
-    background-color: #F2D8C1;
-    border: solid 1px #C89B7A;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Individual Event Card */
-.event {
-    padding: 1.25rem;
-    border: solid 1px #C89B7A;
-    border-radius: 15px;
-    max-width: 18.75rem;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    transition: transform 0.3s ease-in-out;
-}
-
-.event:hover {
-    transform: scale(1.05);
-}
-
-.event img {
+/* Hero Section */
+.hero {
     width: 100%;
-    margin-bottom: 0.625rem;
-    border-radius: 8px;
+    height: 80vh;
+    background: url('../assets/images/mushfes.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    flex-direction: column;
+    text-align: center;
+    color: rgb(208, 161, 128);
+    font-size: large;
+}
+
+.cta-btn {
+    background: #6E3818;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background: #a15d31;
+}
+
+.about-festival, .featured-events, .marketplace, .visit-info, .stay-connected {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.featured-events {
+    text-align: center;      
+    max-width: 1000px;       
+    margin: 0 auto;          
+    padding: 20px;           
 }
 
 .event-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-    margin: auto;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: center; 
+    gap: 20px;               
+}
+/* bak bu ucuncu adim sonra aynisini asagida image container icin yap-> set a fixed width so all cards are the same size */
+.event-card {
+    width: 300px;            
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;        
+    padding-bottom: 20px;    
 }
 
-/* Footer */
+.event-image-container {
+    width: 100%;
+    height: 180px;           
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;  
+}
+
+.event-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+}
+
+.event-grid, .vendor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.event-card, .vendor-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* uniform sizes for images!!!! */
+.event-card .event-image-container {
+    width: 100%;
+    height: 300px;  
+    overflow: hidden;
+    border-radius: 8px; 
+}
+
+.event-card .event-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vendor-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.visit-info {
+    background: #F2D8C1;
+    border-radius: 10px;
+}
+
+.stay-connected .social-icons img {
+    width: 40px;
+    margin: 5px;
+}
+
+/* =================== */
+/* MARK: Footer */
+/* =================== */
 .site-footer {
     background-color: #6E3818;
     color: #C89B7A;
@@ -175,7 +256,7 @@ hr {
 
 .footer-container {
     display: flex;
-    gap: rem;;
+    gap: 1rem;;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1100px;
@@ -248,7 +329,281 @@ hr {
     text-decoration: underline;
 }
 
-/* Location Page */
+/* Footer */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-box {
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* =================== */
+/* MARK: Events Page */
+/* =================== */
+.event-main {
+    padding: 1.25rem;
+}
+
+/* Event Categories */
+.event-categories {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.upcoming-events {
+    position: relative;
+    font-size: 2rem;
+    padding: 50px 20px;
+    color: rgb(142, 107, 80); 
+}
+
+.upcoming-events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/event-hero.webp') no-repeat center center/cover;
+    opacity: 0.5; 
+    z-index: -1; /* Pushes background behind content */
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.category-btn {
+    background: #6E3818;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: #a15d31;
+}
+
+.events {
+    text-align: center;
+    margin-top: 1.25rem;
+    padding: 2.5rem 1.25rem;
+    background-color: #F2D8C1;
+    border: solid 1px #C89B7A;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Featured Event */
+.featured-event {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #F8F8F8;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.event-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.event-details {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Event Cards (Grid Layout) */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.event {
+    padding: 1.25rem;
+    border: solid 1px #C89B7A;
+    border-radius: 15px;
+    max-width: 18.75rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event:hover {
+    transform: scale(1.05);
+}
+
+.event img {
+    width: 100%;
+    margin-bottom: 0.625rem;
+    border-radius: 8px;
+}
+
+/* Event Button */
+.event-btn {
+    background: #6E3818;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.event-btn:hover {
+    background: #a15d31;
+}
+
+/* =================== */
+/* MARK: Menu Page */
+/* =================== */
+.menu-hero {
+    width: 100%;
+    height: 300px;
+    background: url('../assets/images/food-truck-festival-stockcake.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background: #6E3818;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.category-btn.active {
+    background: #a15d31;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: auto;
+    justify-content: center;
+}
+
+.food-item {
+    border: 1px solid #412626;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.food-item:hover {
+    transform: scale(1.05);
+}
+
+.food-item img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.food-pic-section {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.food-cart {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.food-cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.food-cart li {
+    font-size: 1rem;
+    background: #F2D8C1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.menu-table {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.menu-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.menu-table th,
+.menu-table td {
+    border: 1px solid #412626;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .food-item img {
+        max-width: 150px;
+    }
+}
+
+/* =================== */
+/* MARK: Location-Contact Page */
+/* =================== */
+
+/* Location */
 .location-container {
     text-align: center;
     padding: 2.5rem 1.25rem;
@@ -296,7 +651,158 @@ hr {
     width: 50%;
 }
 
-/* About Page */
+/* Contact Section */
+.contact-container {
+    background: #F2D8C1; /* Matches theme */
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    color: #6E3818;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C89B7A;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #6E3818;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #a15d31;
+}
+
+.alt-contact {
+    margin-top: 30px;
+}
+
+.alt-contact h3 {
+    font-size: 1.5rem;
+    color: #6E3818;
+}
+
+.alt-contact p {
+    font-size: 1rem;
+}
+
+.faq-section {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+.faq-section h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #6E3818;
+    margin-bottom: 15px;
+}
+
+/* FAQ Toggle */
+.faq-section details {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #C89B7A;
+    cursor: pointer;
+}
+
+.faq-section summary {
+    font-weight: bold;
+    color: #6E3818;
+    cursor: pointer;
+}
+
+.faq-section details p {
+    padding-top: 5px;
+    color: #333;
+}
+
+/* Location Page */
+@media screen and (max-width: 768px) {
+    .location-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .location-info {
+        max-width: 100%;
+    }
+
+    .map-container {
+        width: 100%;
+        margin-top: 1.25rem;
+    }
+}
+
+/* Contact */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        padding: 30px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .faq-section {
+        width: 100%;
+    }
+}
+
+/* =================== */
+/* MARK: About Page */
+/* =================== */
 .about-hero {
     width: 100vw;
     height: 300px;
@@ -329,7 +835,6 @@ hr {
     color: #333;
 }
 
-/* Lists inside sections */
 .about-section ul {
     margin-top: 10px;
     padding-left: 20px;
@@ -344,6 +849,21 @@ hr {
     color: #003b5c;
     font-size: 1.8rem;
     margin-bottom: 10px;
+}
+
+/* About Page */
+@media screen and (max-width: 768px) {
+    .about-hero {
+        height: 250px;
+    }
+
+    .about-section {
+        padding: 30px 15px;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
 }
 
 /* Responsive Design */
@@ -381,54 +901,5 @@ hr {
 @media screen and (max-width: 1024px) {
     .event-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Footer */
-@media screen and (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-box {
-        margin-bottom: 20px;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-/* Location Page */
-@media screen and (max-width: 768px) {
-    .location-details {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .location-info {
-        max-width: 100%;
-    }
-
-    .map-container {
-        width: 100%;
-        margin-top: 1.25rem;
-    }
-}
-
-/* About Page */
-@media screen and (max-width: 768px) {
-    .about-hero {
-        height: 250px;
-    }
-
-    .about-section {
-        padding: 30px 15px;
-    }
-
-    .about-section h2 {
-        font-size: 1.5rem;
     }
 }

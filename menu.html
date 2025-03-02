@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mush Fest - Events</title>
+    <title>Menu | Mush Fest</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,10 +21,8 @@
                 <li><a href="about.html">ABOUT US</a></li>
                 <li><a href="events.html">EVENTS</a></li>
                 <li><a href="menu.html">MENU</a></li>
-                <li><a href="workshops.html">WORKSHOPS</a></li>
-                <li><a href="location.html" class="active">LOCATION</a></li>
-                <li><a href="shop.html">SHOPS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="location_contact.html#location" class="active">LOCATION</a></li>
+                <li><a href="location_contact.html#contact">CONTACT</a></li>
             </ul>
             <div class="search-container">
                 <img src="assets/images/search.png" alt="Search Icon" class="search-icon">
@@ -32,10 +30,100 @@
             </div>
         </nav>
     </header>
-    
+   
     <!-- Main Content -->
-    <main class="site-main">
+    <main class="menu-container">
+        <!-- Hero Section -->
+    <section class="menu-hero">
+        <h1>Explore the Mush Fest Menu</h1>
+        <p>Delicious mushroom-inspired dishes, from gourmet truffle creations to hearty foraged meals.</p>
+    </section>
 
+    <!-- Menu Categories -->
+    <section class="menu-categories">
+        <h2>Menu Categories</h2>
+        <div class="category-tabs">
+            <button class="category-btn active" data-category="appetizers">Appetizers</button>
+            <button class="category-btn" data-category="mains">Main Dishes</button>
+            <button class="category-btn" data-category="desserts">Desserts</button>
+            <button class="category-btn" data-category="drinks">Drinks</button>
+        </div>
+    </section>
+
+    <!-- Food Grid -->
+    <section class="food-grid">
+        <div class="food-item" data-category="appetizers">
+            <img src="assets/images/stuffed-mushroom__FillWzExNzAsNTgzXQ.jpg" alt="Stuffed Mushrooms">
+            <h3>Stuffed Mushrooms</h3>
+            <p>Oven-baked mushrooms filled with cheese, herbs, and garlic.</p>
+            <span class="price">$8.99</span>
+        </div>
+
+        <div class="food-item" data-category="mains">
+            <img src="assets/images/mushroom-risotto-Square.jpeg" alt="Mushroom Risotto">
+            <h3>Mushroom Risotto</h3>
+            <p>Creamy risotto with wild foraged mushrooms and parmesan.</p>
+            <span class="price">$14.99</span>
+        </div>
+
+        <div class="food-item" data-category="desserts">
+            <img src="assets/images/French-chocolate-truffles-13.jpg.webp" alt="Chocolate Truffle">
+            <h3>Chocolate Truffle</h3>
+            <p>Dark chocolate infused with mushroom extracts for an earthy twist.</p>
+            <span class="price">$6.99</span>
+        </div>
+
+        <div class="food-item" data-category="drinks">
+            <img src="assets/images/tea.php.avif" alt="Mushroom Tea">
+            <h3>Chaga Mushroom Tea</h3>
+            <p>Rich and immune-boosting tea made from Chaga mushrooms.</p>
+            <span class="price">$4.99</span>
+        </div>
+    </section>
+
+    <!-- Vendor Food Cart Section -->
+    <section class="food-cart">
+        <h2>Food Vendors</h2>
+        <h3>Check out what our amazing vendors have to offer!</h3>
+        <ul>
+            <li>The Truffle Stand – Gourmet mushroom-based meals.</li>
+            <li>Forager's Delight – Fresh wild mushroom salads.</li>
+            <li>Mushroom Bakes – Mushroom-infused breads and pastries.</li>
+            <li>Shroom Brews – Unique mushroom coffees and teas.</li>
+        </ul>
+    </section>
+
+    <!-- Menu Table for Quick Viewing -->
+    <section class="menu-table">
+        <h2>Full Menu & Prices</h2>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Stuffed Mushrooms</td>
+                <td>Cheese-filled mushrooms</td>
+                <td>$8.99</td>
+            </tr>
+            <tr>
+                <td>Mushroom Risotto</td>
+                <td>Creamy risotto with wild mushrooms</td>
+                <td>$14.99</td>
+            </tr>
+            <tr>
+                <td>Chocolate Truffle</td>
+                <td>Dark chocolate with mushroom essence</td>
+                <td>$6.99</td>
+            </tr>
+            <tr>
+                <td>Chaga Mushroom Tea</td>
+                <td>Antioxidant-rich mushroom tea</td>
+                <td>$4.99</td>
+            </tr>
+        </table>
+    </section>
     </main>
 
     <!-- Footer -->
